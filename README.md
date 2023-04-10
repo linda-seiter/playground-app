@@ -10,10 +10,11 @@ preview, tests) along with initial code files.
 ## Sample Playgrounds
 
 - [Preview, Console (index.html, index.js, styles.css)](https://playground-app-chi.vercel.app/lesson1/playground1)
-- [RadixUI tabs (not styled)](https://playground-app-chi.vercel.app/lesson1/playground1tabs)
-- [Test, Preview, Console (index.html, index.js, styles.css, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground2)
-- [Test (index.js, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground3)
-- [Test Summary Component (index.js, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground4)
+- [RadixUI tabs (not styled)](https://playground-app-chi.vercel.app/lesson1/playground2)
+- [Test, Preview, Console (index.html, index.js, styles.css, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground3)
+- [Test (index.js, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground4)
+- [Test Summary Component (parent/child)](https://playground-app-chi.vercel.app/lesson1/playground5)
+- [Test Summary Component (siblings)](https://playground-app-chi.vercel.app/lesson1/playground6)
 
 ## Resources
 
