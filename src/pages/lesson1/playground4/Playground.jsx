@@ -6,8 +6,6 @@ import {
   useSandpack,
 } from "@codesandbox/sandpack-react";
 
-import { useState } from "react";
-
 import code from "./index.js?raw";
 import tests from "./index.test.js?raw";
 
@@ -28,51 +26,14 @@ const ResetButton = () => {
   return <button onClick={resetCode}>Reset</button>;
 };
 
-const TestComponent = () => {
-  const [summary, setSummary] = useState("Running Tests");
-
-  const extractTestMessage = (message) => {
-    const index = message.indexOf("Expected");
-    return index != -1 ? message.substring(index) : "";
-  };
-
-  const processTestResult = (specs) => {
-    const test = specs["/index.test.js"];
-    const testResults = Object.values(test.tests);
-    const testSummaries = testResults.map((test) => (
-      <p>
-        {test.name} {test.status} <br></br>
-        {test.status == "fail"
-          ? extractTestMessage(test.errors[0].message)
-          : ""}
-      </p>
-    ));
-    setSummary(testSummaries);
-  };
-
-  return (
-    <>
-      <div>
-        <h3>Test Results</h3>
-        {summary}
-        <SandpackTests
-          onComplete={(specs) => processTestResult(specs)}
-          hideTestsAndSupressLogs
-        />
-      </div>
-    </>
-  );
-};
-
 export default function Playground() {
   return (
     <>
       <SandpackProvider files={files}>
         <ResetButton />
-
         <SandpackLayout>
           <SandpackCodeEditor showInlineErrors showLineNumbers />
-          <TestComponent />
+          <SandpackTests verbose />
         </SandpackLayout>
       </SandpackProvider>
     </>
