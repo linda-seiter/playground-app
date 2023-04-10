@@ -22,7 +22,6 @@ const files = {
   "/styles.css": css,
   "/index.test.js": {
     code: tests,
-    hidden: true,
   },
 };
 
