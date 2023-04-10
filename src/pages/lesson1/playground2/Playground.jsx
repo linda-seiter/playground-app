@@ -20,7 +20,10 @@ const files = {
   },
   "/index.js": code,
   "/styles.css": css,
-  "/index.test.js": tests,
+  "/index.test.js": {
+    code: tests,
+    hidden: true,
+  },
 };
 
 const ResetButton = () => {

@@ -9,8 +9,10 @@ preview, tests) along with initial code files.
 
 ## Sample Playgrounds
 
-- [lesson1/playground1](https://playground-app-chi.vercel.app/lesson1/playground1)
-- [lesson1/playground2](https://playground-app-chi.vercel.app/lesson1/playground2)
+- [Preview, Console (index.html, index.js, styles.css)](https://playground-app-chi.vercel.app/lesson1/playground1)
+- [Test, Preview, Console (index.html, index.js, styles.css, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground2)
+- [Test (index.js, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground3)
+- [Test Summary Component (index.js, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground4)
 
 ## Resources
 
