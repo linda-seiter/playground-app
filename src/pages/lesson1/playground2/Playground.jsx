@@ -1,31 +1,51 @@
 import {
   SandpackProvider,
+  SandpackPreview,
   SandpackLayout,
-  SandpackTests,
   SandpackCodeEditor,
   SandpackConsole,
+  SandpackTests,
+  useSandpack,
 } from "@codesandbox/sandpack-react";
 
 import code from "./index.js?raw";
-import test from "./index.test.js?raw";
+import html from "./index.html?raw";
+import css from "./styles.css?raw";
+import tests from "./index.test.js?raw";
 
 const files = {
-  "/index.js": {
-    code: code,
+  "/index.html": {
+    code: html,
+    active: true,
   },
-  "/index.test.js": {
-    code: test,
-  },
+  "/index.js": code,
+  "/styles.css": css,
+  "/index.test.js": tests,
+};
+
+const ResetButton = () => {
+  const { sandpack } = useSandpack();
+  const resetCode = () => {
+    sandpack.resetAllFiles();
+  };
+
+  return <button onClick={resetCode}>Reset</button>;
 };
 
 export default function Playground() {
   return (
-    <SandpackProvider files={files}>
-      <SandpackLayout>
-        <SandpackCodeEditor showLineNumbers showTabs />
-        <SandpackTests />
-        <SandpackConsole resetOnPreviewRestart="true" />
-      </SandpackLayout>
-    </SandpackProvider>
+    <>
+      <SandpackProvider files={files}>
+        <ResetButton />
+        <SandpackLayout>
+          <SandpackCodeEditor showInlineErrors showLineNumbers />
+          <SandpackTests />
+        </SandpackLayout>
+        <SandpackLayout>
+          <SandpackPreview />
+          <SandpackConsole resetOnPreviewRestart />
+        </SandpackLayout>
+      </SandpackProvider>
+    </>
   );
 }

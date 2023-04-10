@@ -1,5 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 
+function ErrorBoundary() {
+  let error = useRouteError();
+  console.error(error);
+  // Uncaught ReferenceError: path is not defined
+  return <div>Oh no! Path not defined.</div>;
+}
+
 const pages = import.meta.glob("./pages/**/Playground.jsx", { eager: true });
 
 const routes = [];

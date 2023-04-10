@@ -1,11 +1,4 @@
-/* Fix the functions so both tests pass */
+import "./styles.css";
 
-function sum(a, b) {
-  return a - b;
-}
-
-function isEven(n) {
-  return n / 2 === 0;
-}
-
-export { sum, isEven };
+console.log("Hello!");
+document.body.style.background = "lightgray";
