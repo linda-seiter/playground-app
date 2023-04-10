@@ -31,6 +31,11 @@ const ResetButton = () => {
 const TestComponent = () => {
   const [summary, setSummary] = useState("Running Tests");
 
+  const extractTestMessage = (message) => {
+    const index = message.indexOf("Expected");
+    return index != -1 ? message.substring(index) : "";
+  };
+
   const processTestResult = (specs) => {
     const test = specs["/index.test.js"];
     const testResults = Object.values(test.tests);
@@ -38,9 +43,7 @@ const TestComponent = () => {
       <p>
         {test.name} {test.status} <br></br>
         {test.status == "fail"
-          ? test.errors[0].message.substring(
-              test.errors[0].message.indexOf("Expected")
-            )
+          ? extractTestMessage(test.errors[0].message)
           : ""}
       </p>
     ));
@@ -50,7 +53,7 @@ const TestComponent = () => {
   return (
     <>
       <div>
-        <h3>Test Summary</h3>
+        <h3>Test Results</h3>
         {summary}
         <SandpackTests
           onComplete={(specs) => processTestResult(specs)}
@@ -69,7 +72,6 @@ export default function Playground() {
 
         <SandpackLayout>
           <SandpackCodeEditor showInlineErrors showLineNumbers />
-
           <TestComponent />
         </SandpackLayout>
       </SandpackProvider>
