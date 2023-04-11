@@ -39,12 +39,10 @@ const TestComponent = () => {
   const processTestResult = (specs) => {
     const test = specs["/index.test.js"];
     const testResults = Object.values(test.tests);
-    const testSummaries = testResults.map((test) => (
+    const testSummaries = testResults.map(({ name, status, errors }) => (
       <p>
-        {test.name} {test.status} <br></br>
-        {test.status == "fail"
-          ? extractTestMessage(test.errors[0].message)
-          : ""}
+        {name} {status} <br></br>
+        {status == "fail" && extractTestMessage(errors[0].message)}
       </p>
     ));
     setSummary(testSummaries);
