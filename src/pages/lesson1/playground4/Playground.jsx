@@ -8,6 +8,7 @@ import {
 
 import code from "./index.js?raw";
 import tests from "./index.test.js?raw";
+import "./Playground.css";
 
 const files = {
   "/index.js": code,
@@ -29,7 +30,19 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider files={files}>
+      <SandpackProvider
+        files={files}
+        theme={{
+          colors: {
+            accent: "rebeccapurple",
+          },
+          syntax: {
+            tag: "#006400",
+            string: "rgb(255, 165, 0)",
+            plain: "tomato",
+          },
+        }}
+      >
         <ResetButton />
         <SandpackLayout>
           <SandpackCodeEditor showInlineErrors showLineNumbers />
