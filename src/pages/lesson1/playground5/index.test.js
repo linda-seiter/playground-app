@@ -11,7 +11,7 @@ describe("isEven(n) function", function () {
     expect(isEven(1)).toBe(false);
   });
   it("isEven(2) returns true", function () {
-    expect(isEven(1)).toBe(true);
+    expect(isEven(2)).toBe(true);
   });
 });
 
