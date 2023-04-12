@@ -1,4 +1,4 @@
-import { sum, isEven } from "./index.js";
+import { sum, isEven, logShout } from "./index.js";
 
 describe("sum(a, b) function", function () {
   it("sum(1,2) returns 3", function () {
@@ -12,5 +12,17 @@ describe("isEven(n) function", function () {
   });
   it("isEven(2) returns true", function () {
     expect(isEven(1)).toBe(true);
+  });
+});
+
+describe("logShould(string) function", function () {
+  it("logShout('hello') returns 'HELLO'", function () {
+    const logSpy = jest.spyOn(console, "log");
+
+    logShout("hello");
+
+    expect(logSpy).toHaveBeenCalledWith("HELLO");
+
+    logSpy.mockRestore();
   });
 });

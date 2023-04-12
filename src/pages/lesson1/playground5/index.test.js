@@ -1,17 +1,28 @@
-import { sum, isEven } from "./index.js";
+import { sum, isEven, logShout } from "./index.js";
 
-it("sum(1,2)", function () {
-  expect(sum(1, 2)).toBe(3);
+describe("sum(a, b) function", function () {
+  it("sum(1,2) returns 3", function () {
+    expect(sum(1, 2)).toBe(3);
+  });
 });
 
-it("sum(5, 7)", function () {
-  expect(sum(5, 7)).toBe(12);
+describe("isEven(n) function", function () {
+  it("isEven(1) returns false", function () {
+    expect(isEven(1)).toBe(false);
+  });
+  it("isEven(2) returns true", function () {
+    expect(isEven(1)).toBe(true);
+  });
 });
 
-it("isEven(6)", function () {
-  expect(isEven(6)).toBe(true);
-});
+describe("logShould(string) function", function () {
+  it("logShout('hello') returns 'HELLO'", function () {
+    const logSpy = jest.spyOn(console, "log");
 
-it("isEven(7)", function () {
-  expect(isEven(7)).toBe(false);
+    logShout("hello");
+
+    expect(logSpy).toHaveBeenCalledWith("HELLO");
+
+    logSpy.mockRestore();
+  });
 });

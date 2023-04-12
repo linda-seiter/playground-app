@@ -8,4 +8,8 @@ function isEven(n) {
   return n / 2 === 0;
 }
 
-export { sum, isEven };
+function logShout(str) {
+  console.log(str);
+}
+
+export { sum, isEven, logShout };
