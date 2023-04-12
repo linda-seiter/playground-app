@@ -28,26 +28,52 @@ const ResetButton = () => {
   return <button onClick={resetCode}>Reset</button>;
 };
 
-const FeedbackComponent = ({ summary }) => {
-  return <div>{summary}</div>;
+const TestSummary = ({ testResults }) => {
+  if (testResults.hasOwnProperty("describes")) {
+    const describes = Object.values(testResults.describes);
+    return (
+      <ul>
+        {describes.map(({ name, tests }) => {
+          return (
+            <li>
+              {name}
+              <DescribeTests tests={tests} />
+            </li>
+          );
+        })}
+      </ul>
+    );
+  } else {
+    return <div>Running Tests</div>;
+  }
 };
 
-const TestComponent = ({ setSummary }) => {
+function DescribeTests({ tests }) {
   const extractTestMessage = (message) => {
     const index = message.indexOf("Expected");
     return index != -1 ? message.substring(index) : "";
   };
 
+  const describeTests = Object.values(tests);
+  return (
+    <ul>
+      {describeTests.map(({ name, status, errors }) => {
+        return (
+          <li>
+            {name} <br></br>
+            {status} <br></br>
+            {status == "fail" && extractTestMessage(errors[0].message)}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+const TestProcessor = ({ setTestResults }) => {
   const processTestResult = (specs) => {
     const test = specs["/index.test.js"];
-    const testResults = Object.values(test.tests);
-    const testSummaries = testResults.map(({ name, status, errors }) => (
-      <p>
-        {name} {status} <br></br>
-        {status == "fail" && extractTestMessage(errors[0].message)}
-      </p>
-    ));
-    setSummary(testSummaries);
+    setTestResults(test);
   };
 
   return (
@@ -59,7 +85,7 @@ const TestComponent = ({ setSummary }) => {
 };
 
 export default function Playground() {
-  const [summary, setSummary] = useState("Running Tests");
+  const [testResults, setTestResults] = useState("");
 
   return (
     <>
@@ -68,8 +94,8 @@ export default function Playground() {
         <SandpackCodeEditor showInlineErrors showLineNumbers />
 
         <SandpackLayout>
-          <FeedbackComponent summary={summary} />
-          <TestComponent setSummary={setSummary} />
+          <TestSummary testResults={testResults} />
+          <TestProcessor setTestResults={setTestResults} />
         </SandpackLayout>
       </SandpackProvider>
     </>
