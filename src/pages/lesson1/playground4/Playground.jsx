@@ -30,23 +30,11 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider
-        files={files}
-        theme={{
-          colors: {
-            accent: "rebeccapurple",
-          },
-          syntax: {
-            tag: "#006400",
-            string: "rgb(255, 165, 0)",
-            plain: "tomato",
-          },
-        }}
-      >
+      <SandpackProvider files={files}>
         <ResetButton />
         <SandpackLayout>
           <SandpackCodeEditor showInlineErrors showLineNumbers />
-          <SandpackTests verbose />
+          <SandpackTests />
         </SandpackLayout>
       </SandpackProvider>
     </>
