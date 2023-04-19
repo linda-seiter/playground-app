@@ -1,14 +1,8 @@
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackCodeEditor,
-  SandpackTests,
-  useSandpack,
-} from "@codesandbox/sandpack-react";
+import { SandpackProvider } from "@codesandbox/sandpack-react";
 
 import code from "./index.js?raw";
 import tests from "./index.test.js?raw";
-import "./Playground.css";
+import CustomLayout from "./CustomLayout";
 
 const files = {
   "/index.js": code,
@@ -18,25 +12,10 @@ const files = {
   },
 };
 
-const ResetButton = () => {
-  const { sandpack } = useSandpack();
-  const resetCode = () => {
-    sandpack.resetAllFiles();
-  };
-
-  return <button onClick={resetCode}>Reset</button>;
-};
-
 export default function Playground() {
   return (
-    <>
-      <SandpackProvider files={files}>
-        <ResetButton />
-        <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors showLineNumbers />
-          <SandpackTests />
-        </SandpackLayout>
-      </SandpackProvider>
-    </>
+    <SandpackProvider files={files}>
+      <CustomLayout />
+    </SandpackProvider>
   );
 }

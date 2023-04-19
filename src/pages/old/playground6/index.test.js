@@ -1,7 +1,7 @@
 import { sum, isEven, logShout } from "./index.js";
 
-describe("sum(a, b)", function () {
-  it("sum(1,2)", function () {
+describe("sum(a, b) function", function () {
+  it("sum(1,2) returns 3", function () {
     expect(sum(1, 2)).toBe(3);
   });
 });
@@ -17,6 +17,7 @@ describe("isEven(n)", function () {
 
 describe("logShout(string)", function () {
   it("logShout('hello')", function () {
+    alert("logShout test");
     const logSpy = jest.spyOn(console, "log");
 
     logShout("hello");

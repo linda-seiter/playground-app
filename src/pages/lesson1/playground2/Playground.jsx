@@ -55,7 +55,7 @@ export default function Playground() {
           <SandpackPreview />
         </Tabs.Content>
         <Tabs.Content className="TabsContent" value="tab2">
-          <SandpackConsole resetOnPreviewRestart standalone />
+          <SandpackConsole resetOnPreviewRestart standalone={true} />
         </Tabs.Content>
       </Tabs.Root>
     </SandpackProvider>
