@@ -32,7 +32,7 @@ export default function Playground() {
       >
         <ResetButton />
         <SandpackLayout>
-          <SandpackCodeEditor showLineNumbers showRunButton />
+          <SandpackCodeEditor showLineNumbers showInlineErrors showRunButton />
           <SandpackConsole resetOnPreviewRestart standalone />
         </SandpackLayout>
       </SandpackProvider>
