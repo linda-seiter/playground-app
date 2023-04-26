@@ -29,6 +29,7 @@ export default function Playground() {
         files={files}
         options={{
           autorun: false,
+          autoReload: false,
         }}
       >
         <ResetButton />
