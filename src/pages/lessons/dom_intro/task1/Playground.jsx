@@ -9,7 +9,6 @@ import {
 
 import code from "./index.js?raw";
 import html from "./index.html?raw";
-import css from "./styles.css?raw";
 
 const files = {
   "/index.html": {
@@ -17,7 +16,6 @@ const files = {
     active: true,
   },
   "/index.js": code,
-  "/styles.css": css,
 };
 
 const ResetButton = () => {
@@ -32,15 +30,10 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider
-        files={files}
-        options={{
-          autorun: false,
-        }}
-      >
+      <SandpackProvider template="vanilla" files={files}>
         <ResetButton />
         <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors={true} showLineNumbers />
+          <SandpackCodeEditor showInlineErrors showLineNumbers />
         </SandpackLayout>
         <SandpackLayout>
           <SandpackPreview />

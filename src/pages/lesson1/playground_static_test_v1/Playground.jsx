@@ -4,12 +4,14 @@ import {
   SandpackLayout,
   SandpackCodeEditor,
   SandpackConsole,
+  SandpackTests,
   useSandpack,
 } from "@codesandbox/sandpack-react";
 
 import code from "./index.js?raw";
 import html from "./index.html?raw";
 import css from "./styles.css?raw";
+import tests from "./index.test.js?raw";
 
 const files = {
   "/index.html": {
@@ -18,6 +20,9 @@ const files = {
   },
   "/index.js": code,
   "/styles.css": css,
+  "/index.test.js": {
+    code: tests,
+  },
 };
 
 const ResetButton = () => {
@@ -32,15 +37,11 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider
-        files={files}
-        options={{
-          autorun: false,
-        }}
-      >
+      <SandpackProvider template="static" files={files}>
         <ResetButton />
         <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors={true} showLineNumbers />
+          <SandpackCodeEditor showInlineErrors showLineNumbers />
+          <SandpackTests verbose />
         </SandpackLayout>
         <SandpackLayout>
           <SandpackPreview />

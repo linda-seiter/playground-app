@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playground</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h2>style modification</h2>
+    <p id="city">Boston</p>
+
+    <h2>onchange event</h2>
+    <label>Enter your name:</label>
+    <input id="name" type="text" onchange="greet()" />
+    <p id="greeting"></p>
+
+    <h2>onclick event</h2>
+    <p id="state">MA</p>
+    <input
+      id="button"
+      type="button"
+      value="Show state's full name"
+      onclick="showStateName()"
+    />
+
+    <h2>onclick 2</h2>
+    <p id="country">USA</p>
+    <input id="button2" type="button" value="Show countries's full name" />
+
+    <script src="index.js"></script>
+  </body>
+</html>

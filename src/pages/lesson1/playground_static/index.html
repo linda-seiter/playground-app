@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playground</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h2>style modification</h2>
+    <p id="city">Boston</p>
+
+    <h2>onchange event</h2>
+    <label>Enter your name:</label>
+    <input id="name" type="text" onchange="greet()" />
+    <p id="greeting"></p>
+
+    <h2>onclick event</h2>
+    <p id="state">MA</p>
+    <input
+      id="button"
+      type="button"
+      value="Show state's full name"
+      onclick="showStateName()"
+    />
+
+    <script src="index.js"></script>
+  </body>
+</html>

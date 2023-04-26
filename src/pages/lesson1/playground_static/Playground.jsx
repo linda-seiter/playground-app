@@ -32,15 +32,10 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider
-        files={files}
-        options={{
-          autorun: false,
-        }}
-      >
+      <SandpackProvider template="static" files={files}>
         <ResetButton />
         <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors={true} showLineNumbers />
+          <SandpackCodeEditor showInlineErrors showLineNumbers />
         </SandpackLayout>
         <SandpackLayout>
           <SandpackPreview />
