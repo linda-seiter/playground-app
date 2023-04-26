@@ -3,6 +3,7 @@ import {
   SandpackLayout,
   SandpackCodeEditor,
   SandpackConsole,
+  SandpackPreview,
   useSandpack,
 } from "@codesandbox/sandpack-react";
 
@@ -32,8 +33,11 @@ export default function Playground() {
       >
         <ResetButton />
         <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors showLineNumbers />
+          <SandpackCodeEditor showInlineErrors showLineNumbers showRunButton />
           <SandpackConsole resetOnPreviewRestart standalone />
+        </SandpackLayout>
+        <SandpackLayout>
+          <SandpackPreview />
         </SandpackLayout>
       </SandpackProvider>
     </>
