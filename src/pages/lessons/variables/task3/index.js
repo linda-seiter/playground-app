@@ -1,13 +1,14 @@
-const people = 3;
-const pizzaSlices = 16;
+//Initialize the number of people and the cost of the restaurant bill.
+const people = 5;
+const bill = 45;
 
-//Math.floor rounds down to nearest integer
-const slicesPerPerson = Math.floor(pizzaSlices / people);
+//Calculate the cost per person.
+const costPerPerson = bill / people;
 
-//Modulo operator % computes the remainder after division
-const leftoverSlices = pizzaSlices % people;
-
-console.log("#people: " + people);
-console.log("#slices: " + pizzaSlices);
-console.log("slices per person: " + slicesPerPerson);
-console.log("leftover slices: " + leftoverSlices);
+/*
+NOTE: 
+${bill} displays the value in the variable named "bill", i.e. 45.
+$${bill} adds a dollar sign $ before the value, i.e. $45.
+*/
+console.log(`${people} people need to split a $${bill} restaurant bill.`);
+console.log(`The cost per person is $${costPerPerson}.`);

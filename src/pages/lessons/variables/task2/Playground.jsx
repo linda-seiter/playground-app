@@ -1,5 +1,5 @@
 import {
-  SandpackProvider,
+  Sandpack,
   SandpackLayout,
   SandpackCodeEditor,
   SandpackConsole,
@@ -25,22 +25,14 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider
+      <Sandpack
         files={files}
         options={{
-          autorun: false,
-          autoReload: false,
+          layout: "console",
+          resetOnPreviewRestart: true,
+          showInlineErrors: true,
         }}
-      >
-        <ResetButton />
-        <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors showLineNumbers showRunButton />
-          <SandpackConsole resetOnPreviewRestart standalone />
-        </SandpackLayout>
-        <SandpackLayout>
-          <SandpackPreview />
-        </SandpackLayout>
-      </SandpackProvider>
+      ></Sandpack>
     </>
   );
 }

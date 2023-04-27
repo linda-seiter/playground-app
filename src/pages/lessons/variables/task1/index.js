@@ -1,7 +1,13 @@
-const people = 5;
-const bill = 45;
-const costPerPerson = bill / people;
+//Declare a constant named "width" and assign it an integer value 9.
+const width = 9;
 
-console.log("#People: " + people);
-console.log("Bill: $" + bill);
-console.log("Cost per person: $" + costPerPerson);
+//Declare a constant named "height" and assign it an integer value 2.
+const height = 2;
+
+//Declare a constant named "area" and assign it to the product of width * height.
+const area = width * height;
+
+//Use the console.log() function to print the values stored in each variable.
+console.log(width);
+console.log(height);
+console.log(area);
