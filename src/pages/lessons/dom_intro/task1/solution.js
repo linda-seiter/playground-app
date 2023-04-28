@@ -22,3 +22,10 @@ Declare a constant named "noteParagraph" and assign it to the element
 Style the paragraph with an white background, black text color,
  bold font, 0.5em padding, and 5px dotted red border.
 */
+
+const noteParagraph = document.getElementById("note");
+noteParagraph.style.background = "white";
+noteParagraph.style.color = "black";
+noteParagraph.style.fontStyle = "bold";
+noteParagraph.style.padding = "0.5em";
+noteParagraph.style.border = "5px dotted red";

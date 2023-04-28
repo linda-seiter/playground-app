@@ -3,3 +3,6 @@ const cityText = cityP.textContent; //The text between start and end tags of the
 console.log(`The city is ${cityText}.`);
 
 //CHALLENGE: Print the text contained in the state paragraph to the console.
+const stateP = document.getElementById("state"); //The paragraph element with id="state".
+const stateText = stateP.textContent; //The text between start and end tags of the paragraph.
+console.log(`The state is ${stateText}.`);
