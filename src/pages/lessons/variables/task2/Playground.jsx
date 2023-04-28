@@ -5,7 +5,7 @@ import html from "./index.html?raw";
 
 const files = {
   "/index.js": code,
-  "index.html": html,
+  "/index.html": html,
 };
 
 export default function Playground() {
@@ -13,11 +13,13 @@ export default function Playground() {
     <Sandpack
       files={files}
       options={{
+        editorHeight: 500,
         editorWidthPercentage: 60,
-        editorHeight: 400,
-        autorun: false,
         autoReload: false,
         showConsoleButton: true,
+        showInlineErrors: true,
+        recompileMode: "delayed",
+        recompileDelay: 1000,
       }}
     ></Sandpack>
   );

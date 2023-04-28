@@ -1,41 +1,26 @@
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackCodeEditor,
-  SandpackConsole,
-  useSandpack,
-} from "@codesandbox/sandpack-react";
+import { Sandpack, useSandpack } from "@codesandbox/sandpack-react";
 
 import code from "./index.js?raw";
+import html from "./index.html?raw";
 
 const files = {
   "/index.js": code,
-};
-
-const ResetButton = () => {
-  const { sandpack } = useSandpack();
-  const resetCode = () => {
-    sandpack.resetAllFiles();
-  };
-
-  return <button onClick={resetCode}>Reset</button>;
+  "/index.html": html,
 };
 
 export default function Playground() {
   return (
-    <>
-      <SandpackProvider
-        files={files}
-        options={{
-          autorun: false,
-        }}
-      >
-        <ResetButton />
-        <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors showLineNumbers />
-          <SandpackConsole resetOnPreviewRestart standalone />
-        </SandpackLayout>
-      </SandpackProvider>
-    </>
+    <Sandpack
+      files={files}
+      options={{
+        editorHeight: 400,
+        editorWidthPercentage: 60,
+        autoReload: false,
+        showConsoleButton: true,
+        showInlineErrors: true,
+        recompileMode: "delayed",
+        recompileDelay: 1000,
+      }}
+    ></Sandpack>
   );
 }

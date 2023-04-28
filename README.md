@@ -9,14 +9,24 @@ preview, tests) along with initial code files.
 
 ## Sample Playgrounds
 
-- [Preview, Console (index.html, index.js, styles.css)](https://playground-app-chi.vercel.app/lesson1/playground1)
-- [RadixUI tabs (not styled)](https://playground-app-chi.vercel.app/lesson1/playground2).
-  Need to hit run button on console tab.
-- [Test, Preview, Console (index.html, index.js, styles.css, index.test.js)](https://playground-app-chi.vercel.app/lesson1/playground3)
-- [Test Summary Component](https://playground-app-chi.vercel.app/lesson1/playground4)
+# JS Variables
+
+- task1: area of rectangle. const, assignment, console.log
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task1)
+- task2: task1 + string interpolation.
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task2)
+- task3: pizza slices per person. integer division, Math.floor.
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task3)
+- task4: people getting on/off bus. let, reassignment.
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task4)
+- task5: task4 + compound operators +=, -=.
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task5)
+- task6: viral spread. let, const, compound operator \*=
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task6)
 
 ## Resources
 
+- [https://pythontutor.com/javascript.html](https://pythontutor.com/javascript.html)
 - [Sandpack](https://sandpack.codesandbox.io/)
 - [Vite](https://vitejs.dev/)
 - [Vercel](https://vercel.com/)
