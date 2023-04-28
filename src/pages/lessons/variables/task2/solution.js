@@ -8,9 +8,13 @@ const height = 2;
 const area = width * height;
 
 //CHALLENGE: Add additional lines of code to display the height and area in the console.
+
 console.log(`width: ${width}`);
+console.log(`height: ${height}`);
+console.log(`area: ${area}`);
 
 /*
 CHALLENGE: Use console.log to display width, height, and area as shown:
 The area of a 9x2 rectangle is 18.
 */
+console.log(`The area of a ${width}x${height} rectangle is ${area}.`);

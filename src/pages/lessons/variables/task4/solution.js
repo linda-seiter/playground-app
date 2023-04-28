@@ -17,5 +17,13 @@ console.log(
 //CHALLENGE: Add more bus stops.
 
 //4 people get on the bus
+busRiders = busRiders + 4;
+console.log(
+  `4 people get on at stop#3. There are ${busRiders} people on the bus.`
+);
 
 //2 people get off the bus
+busRiders = busRiders - 2;
+console.log(
+  `2 people get off at stop#4. There are ${busRiders} people on the bus.`
+);
