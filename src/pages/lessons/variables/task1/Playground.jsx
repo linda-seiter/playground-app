@@ -15,11 +15,12 @@ export default function Playground() {
       options={{
         editorHeight: 400,
         editorWidthPercentage: 60,
+        autorun: false,
         autoReload: false,
         showConsoleButton: true,
+        showConsole: true,
         showInlineErrors: true,
-        recompileMode: "delayed",
-        recompileDelay: 1000,
+        recompileDelay: 2000, //default is 500
       }}
     ></Sandpack>
   );

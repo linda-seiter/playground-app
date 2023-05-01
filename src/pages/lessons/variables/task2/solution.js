@@ -7,8 +7,7 @@ const height = 2;
 //Declare a constant named "area" and assign it to the product of width * height.
 const area = width * height;
 
-//CHALLENGE: Add additional lines of code to display the height and area in the console.
-
+//CHALLENGE: Add code to display the width, height, and area in the console.
 console.log(`width: ${width}`);
 console.log(`height: ${height}`);
 console.log(`area: ${area}`);

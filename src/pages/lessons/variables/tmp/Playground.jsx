@@ -1,6 +1,6 @@
+import CustomSandpack from "./CustomSandpack";
 import code from "./index.js?raw";
 import html from "./index.html?raw";
-import CustomLayout from "./CustomLayout";
 
 const files = {
   "/index.html": html,
@@ -8,5 +8,5 @@ const files = {
 };
 
 export default function Playground() {
-  return <CustomLayout files={files}></CustomLayout>;
+  return <CustomSandpack files={files}></CustomSandpack>;
 }

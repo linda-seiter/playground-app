@@ -24,6 +24,17 @@ preview, tests) along with initial code files.
 - task6: viral spread. let, const, compound operator \*=
   - [playground](https://playground-app-chi.vercel.app/lessons/variables/task6)
 
+# DOM Intro
+
+- task1: element selection, basic styling. querySelector, getElementById.
+  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task1)
+- task2: read textContent property.
+  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task2)
+- task3: assign textContent property.
+  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task3)
+- task4: fix error in code.
+  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task4)
+
 ## Resources
 
 - [https://pythontutor.com/javascript.html](https://pythontutor.com/javascript.html)
