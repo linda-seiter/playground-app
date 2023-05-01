@@ -34,6 +34,8 @@ preview, tests) along with initial code files.
   - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task3)
 - task4: fix error in code.
   - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task4)
+- task5: skills from tasks 1-4
+  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task5)
 
 ## Resources
 
