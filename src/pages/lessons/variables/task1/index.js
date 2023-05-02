@@ -1,13 +1,13 @@
-//Declare a constant named "width" and assign it an integer value 9.
+//Declare constant "width" assigned to 9.
 const width = 9;
 
-//Declare a constant named "height" and assign it an integer value 2.
+//Declare constant "height" assigned to 2.
 const height = 2;
 
-//Declare a constant named "area" and assign it to the product of width * height.
+//Declare constant "area" assigned width * height.
 const area = width * height;
 
-//Use the console.log() function to print the values stored in each variable.
+//Use console.log() to print constant values.
 console.log(width);
 console.log(height);
 console.log(area);

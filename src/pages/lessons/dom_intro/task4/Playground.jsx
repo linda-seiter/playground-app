@@ -16,9 +16,8 @@ export default function Playground() {
         editorHeight: 600,
         autoReload: false,
         showConsoleButton: true,
+        showConsole: true,
         showInlineErrors: true,
-        recompileMode: "delayed",
-        recompileDelay: 1000,
       }}
     ></Sandpack>
   );

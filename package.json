@@ -12,7 +12,7 @@
     "@codemirror/lang-python": "^6.1.2",
     "@codemirror/language": "^6.6.0",
     "@codemirror/legacy-modes": "^6.3.2",
-    "@codesandbox/sandpack-react": "^2.2.9",
+    "@codesandbox/sandpack-react": "^2.6.2",
     "@codesandbox/sandpack-themes": "^2.0.21",
     "@radix-ui/react-tabs": "^1.0.3",
     "@radix-ui/react-toolbar": "^1.0.3",

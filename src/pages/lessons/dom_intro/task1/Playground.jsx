@@ -16,12 +16,10 @@ export default function Playground() {
       files={files}
       options={{
         editorHeight: 600,
-        autorun: false,
         autoReload: false,
         showConsoleButton: true,
+        showConsole: true,
         showInlineErrors: true,
-        recompileMode: "delayed",
-        recompileDelay: 1000,
       }}
     ></Sandpack>
   );

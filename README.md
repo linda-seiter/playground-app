@@ -17,6 +17,8 @@ preview, tests) along with initial code files.
   - [playground](https://playground-app-chi.vercel.app/lessons/variables/task2)
 - task3: pizza slices per person. integer division, Math.floor.
   - [playground](https://playground-app-chi.vercel.app/lessons/variables/task3)
+- task3decorate: Code decoration
+  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task3decorate)
 - task4: people getting on/off bus. let, reassignment.
   - [playground](https://playground-app-chi.vercel.app/lessons/variables/task4)
 - task5: task4 + compound operators +=, -=.

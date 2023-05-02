@@ -13,13 +13,11 @@ export default function Playground() {
     <Sandpack
       files={files}
       options={{
-        editorHeight: 400,
-        editorWidthPercentage: 60,
+        editorHeight: 500,
         autoReload: false,
         showConsoleButton: true,
+        showConsole: true,
         showInlineErrors: true,
-        recompileMode: "delayed",
-        recompileDelay: 1000,
       }}
     ></Sandpack>
   );

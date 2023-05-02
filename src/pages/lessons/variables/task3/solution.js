@@ -1,12 +1,24 @@
-const people = 3;
-const pizzaSlices = 20;
+//Declare constant "width" assigned to 9.
+const width = 9;
 
-//Math.floor rounds down to nearest integer
-const slicesPerPerson = Math.floor(pizzaSlices / people);
+//Declare constant "height" assigned to 2.
+const height = 2;
 
-//Modulo operator % computes the remainder after division
-const leftoverSlices = pizzaSlices % people;
+//Declare constant "area" assigned width * height.
+const area = width * height;
 
-console.log(`${people} people are splitting ${pizzaSlices} slices of pizza.`);
-console.log(`Each person gets ${slicesPerPerson} slices.`);
-console.log(`There are ${leftoverSlices} slices leftover.`);
+//Use string interpolation to display formatted output
+console.log(`width: ${width}`);
+
+/*
+CHALLENGE: Update the following two statements to display
+ height and area in a similar format as width was displayed.
+*/
+console.log(`height: ${height}`);
+console.log(`area: ${area}`);
+
+/*
+CHALLENGE: Add a statement to display width, height, and area as:
+The area of a 9x2 rectangle is 18.
+*/
+console.log(`The area of a ${width}x${height} rectangle is ${area}.`);
