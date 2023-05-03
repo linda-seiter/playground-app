@@ -15,6 +15,7 @@ export default function Playground() {
       options={{
         editorHeight: 600,
         autoReload: false,
+        autorun: false,
         showConsoleButton: true,
         showConsole: true,
         showInlineErrors: true,
