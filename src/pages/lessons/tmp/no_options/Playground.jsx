@@ -1,4 +1,4 @@
-import CustomSandpack from "./CustomSandpack";
+import CodePlayground from "../../CodePlayground";
 import code from "./index.js?raw";
 import html from "./index.html?raw";
 
@@ -8,5 +8,5 @@ const files = {
 };
 
 export default function Playground() {
-  return <CustomSandpack files={files}></CustomSandpack>;
+  return <CodePlayground files={files}></CodePlayground>;
 }

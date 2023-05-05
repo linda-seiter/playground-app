@@ -1,17 +1,16 @@
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-export default function CustomSandpack({ files }) {
+export default function CodePlayground({ files, options = {} }) {
   return (
     <Sandpack
       files={files}
       options={{
-        editorHeight: 500,
         autoReload: false,
         autorun: false,
+        showConsole: true,
         showConsoleButton: true,
         showInlineErrors: true,
-        recompileMode: "delayed",
-        recompileDelay: 2000,
+        ...options,
       }}
     ></Sandpack>
   );

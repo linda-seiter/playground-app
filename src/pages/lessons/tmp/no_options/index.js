@@ -1,5 +1,5 @@
 //Declare constant "width" and assign it an integer value 9.
-const width = 9;
+const width = 10;
 
 //Declare constant "height" and assign it an integer value 2.
 const height = 2;
