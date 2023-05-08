@@ -12,32 +12,32 @@ preview, tests) along with initial code files.
 # JS Variables
 
 - task1: area of rectangle. const, assignment, console.log
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task1)
+  - [playground](https://playground-app-chi.vercel.app/variables/task1)
 - task2: task1 + string interpolation.
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task2)
+  - [playground](https://playground-app-chi.vercel.app/variables/task2)
 - task3: pizza slices per person. integer division, Math.floor.
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task3)
+  - [playground](https://playground-app-chi.vercel.app/variables/task3)
 - task3decorate: Code decoration
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task3decorate)
+  - [playground](https://playground-app-chi.vercel.app/variables/task3decorate)
 - task4: people getting on/off bus. let, reassignment.
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task4)
+  - [playground](https://playground-app-chi.vercel.app/variables/task4)
 - task5: task4 + compound operators +=, -=.
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task5)
+  - [playground](https://playground-app-chi.vercel.app/variables/task5)
 - task6: viral spread. let, const, compound operator \*=
-  - [playground](https://playground-app-chi.vercel.app/lessons/variables/task6)
+  - [playground](https://playground-app-chi.vercel.app/variables/task6)
 
 # DOM Intro
 
 - task1: element selection, basic styling. querySelector, getElementById.
-  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task1)
+  - [playground](https://playground-app-chi.vercel.app/dom_intro/task1)
 - task2: read textContent property.
-  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task2)
+  - [playground](https://playground-app-chi.vercel.app/dom_intro/task2)
 - task3: assign textContent property.
-  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task3)
+  - [playground](https://playground-app-chi.vercel.app/dom_intro/task3)
 - task4: fix error in code.
-  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task4)
+  - [playground](https://playground-app-chi.vercel.app/dom_intro/task4)
 - task5: skills from tasks 1-4
-  - [playground](https://playground-app-chi.vercel.app/lessons/dom_intro/task5)
+  - [playground](https://playground-app-chi.vercel.app/dom_intro/task5)
 
 ## Resources
 
