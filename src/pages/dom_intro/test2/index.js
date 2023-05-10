@@ -1,11 +1,15 @@
-function createEventListener() {
-  const button = document.getElementById("click-me");
-  button.addEventListener("click", () => {
-    console.log("I was clicked!");
-    const h2 = document.createElement("h2");
-    h2.textContent = "second-header";
-    document.body.append(h2);
-  });
+/* Fix the functions so the tests pass */
+
+function sum(a, b) {
+  return a - b;
 }
 
-export { createEventListener };
+function isEven(n) {
+  return n / 2 === 0;
+}
+
+function logShout(string) {
+  console.log(string);
+}
+
+export { sum, isEven, logShout };

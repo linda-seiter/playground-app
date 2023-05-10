@@ -1,11 +1,5 @@
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackCodeEditor,
-  SandpackTests,
-  SandpackPreview,
-  SandpackConsole,
-} from "@codesandbox/sandpack-react";
+import { Sandpack } from "@codesandbox/sandpack-react";
+
 import html from "./index.html?raw";
 import css from "./styles.css?raw";
 import code from "./index.js?raw";
@@ -23,20 +17,11 @@ const files = {
 
 export default function Playground() {
   return (
-    <SandpackProvider
+    <Sandpack
       files={files}
       options={{
-        showInlineErrors: true,
+        layout: "tests",
       }}
-    >
-      <SandpackLayout>
-        <SandpackCodeEditor></SandpackCodeEditor>
-        <SandpackTests></SandpackTests>
-      </SandpackLayout>
-      <SandpackLayout>
-        <SandpackConsole></SandpackConsole>
-        <SandpackPreview showSandpackErrorOverlay={false}></SandpackPreview>
-      </SandpackLayout>
-    </SandpackProvider>
+    ></Sandpack>
   );
 }

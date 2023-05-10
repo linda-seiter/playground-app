@@ -1,54 +1,28 @@
-import fs from "fs";
-import path from "path";
-import { createEventListener } from "./index.js";
+import { sum, isEven, logShout } from "./index.js";
 
-const html = fs.readFileSync(path.resolve(__dirname, "./index.html"), "utf-8");
-const css = fs.readFileSync(path.resolve(__dirname, "./styles.css"), "utf-8");
-
-document.documentElement.innerHTML = html;
-const style = document.createElement("style");
-style.innerHTML = css;
-document.head.append(style);
-
-describe("query DOM", () => {
-  it("has h1 with correct text", () => {
-    const match = document.querySelectorAll("h1");
-    expect(match.length).toBe(1);
-    expect(match.item(0).innerHTML).toBe("Welcome!");
-  });
-
-  it("has two paragraphs with correct text", () => {
-    const match = document.querySelectorAll("p");
-    expect(match.length).toBe(2);
-    expect(match.item(0).innerHTML).toBe("first paragraph");
-    expect(match.item(1).innerHTML).toBe("second paragraph");
+describe("sum(a, b)", function () {
+  it("sum(1,2) returns 3", function () {
+    expect(sum(1, 2)).toBe(3);
   });
 });
 
-describe("query css", () => {
-  it('styles element with id "p2"', () => {
-    const match = document.getElementById("p2");
-    expect(match).not.toBe(null);
-    const styles = window.getComputedStyle(match);
-    expect(styles.color).toBe("yellow");
+describe("isEven(n)", function () {
+  it("isEven(1) returns false", function () {
+    expect(isEven(1)).toBe(false);
   });
-
-  it('styles elements with class "highlight"', () => {
-    const match = document.getElementsByClassName("highlight");
-    expect(match.length).toBe(2);
-    const styles = window.getComputedStyle(match[0]);
-    expect(styles.background).toBe("black");
-    expect(styles.color).toBe("white");
-    expect(styles.padding).toBe("1em");
+  it("isEven(2) returns true", function () {
+    expect(isEven(2)).toBe(true);
   });
 });
 
-describe("can test event listeners", () => {
-  it("runs a console.log when clicked", () => {
+describe("logShout(string)", function () {
+  it("logShout('hello') returns 'HELLO'", function () {
     const logSpy = jest.spyOn(console, "log");
-    createEventListener();
-    const button = document.getElementById("click-me");
-    button.click();
-    expect(logSpy).toHaveBeenCalledWith("I was clicked!");
+
+    logShout("hello");
+
+    expect(logSpy).toHaveBeenCalledWith("HELLO");
+
+    logSpy.mockRestore();
   });
 });

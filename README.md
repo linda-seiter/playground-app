@@ -41,11 +41,13 @@ preview, tests) along with initial code files.
 
 # Test Playgrounds
 
-- test1: functions that return values or log to console.
+- test1: functions, sandpack test layout
   - [playground](https://playground-app-chi.vercel.app/dom_intro/test1)
-- test2: dom, sandpack test layout
+- test12: functions, layout includes console
+  - [playground](https://playground-app-chi.vercel.app/dom_intro/test1)
+- test3: dom, sandpack test layout
   - [playground](https://playground-app-chi.vercel.app/dom_intro/test2)
-- test3: dom, layout includes console and preview components
+- test4: dom, layout includes console and preview components
   - [playground](https://playground-app-chi.vercel.app/dom_intro/test3)
 
 ## Resources
