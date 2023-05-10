@@ -3,13 +3,14 @@ import {
   SandpackPreview,
   SandpackLayout,
   SandpackCodeEditor,
-  SandpackConsole,
+  SandpackTests,
   useSandpack,
 } from "@codesandbox/sandpack-react";
 
 import code from "./index.js?raw";
 import html from "./index.html?raw";
-import css from "./styles.css?raw";
+import tests from "./index.test.js?raw";
+import testsetup from "./setup.test.js?raw";
 
 const files = {
   "/index.html": {
@@ -17,7 +18,11 @@ const files = {
     active: true,
   },
   "/index.js": code,
-  "/styles.css": css,
+  "/index.test.js": tests,
+  "/setup.test.ts": {
+    hidden: true,
+    code: testsetup,
+  },
 };
 
 const ResetButton = () => {
@@ -32,14 +37,16 @@ const ResetButton = () => {
 export default function Playground() {
   return (
     <>
-      <SandpackProvider files={files}>
+      <SandpackProvider
+        template="vanilla"
+        files={files}
+        customSetup={{ dependencies: { "@testing-library/jest-dom": "*" } }}
+      >
         <ResetButton />
-        <SandpackLayout>
-          <SandpackCodeEditor showInlineErrors showLineNumbers />
-        </SandpackLayout>
+        <SandpackCodeEditor showInlineErrors showLineNumbers />
         <SandpackLayout>
           <SandpackPreview />
-          <SandpackConsole resetOnPreviewRestart />
+          <SandpackTests />
         </SandpackLayout>
       </SandpackProvider>
     </>
